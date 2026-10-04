@@ -243,14 +243,15 @@
             </Border>
 
             <StackPanel Grid.Row="3" Spacing="10">
-                <Border IsVisible="{Binding Notes, Converter={StaticResource NotEmpty}}"
+                <Border x:Name="NotesCard"
+                        IsVisible="{Binding Notes, Converter={StaticResource NotEmpty}}"
                         Classes="Card">
                     <StackPanel Spacing="10">
                         <DockPanel>
                             <PathIcon Classes="CardTitle"
                                       Data="{StaticResource important_regular}" />
                             <TextBlock Classes="CardTitle"
-                                       Text="Important" />
+                                       Text="Profile Notes" />
                         </DockPanel>
                         <ScrollViewer Classes="Notes">
                             <TextBlock Classes="NotesText"
